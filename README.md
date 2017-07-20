@@ -1,3 +1,3 @@
 # cric
 
-(Amit Jha)[mailto:amitjha@usc.edu)
+(Amit Jha)[mailto:amitjha@usc.edu]
