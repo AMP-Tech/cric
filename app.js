@@ -23,22 +23,15 @@
    */
   function config($routeProvider, $locationProvider, $httpProvider, $compileProvider) {
 
-    $locationProvider.html5Mode(false);
-
     // routes
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
-        controller: 'MainController',
-        controllerAs: 'main'
-      })
-      .when('/contact', {
-        templateUrl: 'views/contact.html',
+        templateUrl: 'main/home.html',
         controller: 'MainController',
         controllerAs: 'main'
       })
       .when('/setup', {
-        templateUrl: 'views/setup.html',
+        templateUrl: 'main/setup.html',
         controller: 'MainController',
         controllerAs: 'main'
       })
@@ -60,9 +53,9 @@
     .module('cric')
     .factory('authInterceptor', authInterceptor);
 
-  authInterceptor.$inject = ['$rootScope', '$q', 'LocalStorage', '$location'];
+  authInterceptor.$inject = ['$rootScope', '$q', '$location'];
 
-  function authInterceptor($rootScope, $q, LocalStorage, $location) {
+  function authInterceptor($rootScope, $q, $location) {
 
     return {
 

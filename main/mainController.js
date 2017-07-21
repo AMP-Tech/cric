@@ -2,12 +2,7 @@
 
   angular
     .module('cric')
-    .controller('MainController', MainController);
-
-  MainController.$inject = ['LocalStorage', 'QueryService'];
-
-
-  function MainController(LocalStorage, QueryService) {
+    .controller('MainController',function () {
 
     // 'controller as' syntax
     var self = this;
@@ -24,7 +19,7 @@
     //   .then(function(ovocie) {
     //     self.ovocie = ovocie.data;
     //   });
-  }
+});
 
 
 })();
